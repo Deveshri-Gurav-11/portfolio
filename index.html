@@ -881,6 +881,39 @@ footer a { color: var(--accent); text-decoration: none; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 
+  .highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.highlight-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  transition: 0.3s;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.highlight-card h3 {
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 1.1rem;
+}
+
+.highlight-card p {
+  color: var(--text2);
+  line-height: 1.7;
+  font-size: 0.92rem;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
   nav { padding: 0 20px; }
@@ -1276,21 +1309,23 @@ footer a { color: var(--accent); text-decoration: none; }
   <div class="sec-label">Open Source Activity</div>
   <h2 class="sec-title">GitHub <em>contributions</em></h2>
   <div class="github-wrap reveal">
-    <<div class="github-imgs">
+    <div class="highlights-grid">
 
-  <img 
-    src="https://github-readme-stats.vercel.app/api?username=Deveshri-Gurav-11&show_icons=true&theme=default"
-    alt="GitHub Stats"
-  />
-
-  <img 
-    src="https://github-readme-stats.vercel.app/api/top-langs/?username=Deveshri-Gurav-11&layout=compact&theme=default"
-    alt="Top Languages"
-  />
-
-</div>
-    <a href="https://github.com/Deveshri-Gurav-11" target="_blank" class="btn-primary" style="display:inline-flex;">View GitHub Profile →</a>
+  <div class="highlight-card">
+    <h3>📊 Data Analytics</h3>
+    <p>Built end-to-end analytics dashboards using Python, SQL, Excel, and Power BI across telecom, retail, and food delivery datasets.</p>
   </div>
+
+  <div class="highlight-card">
+    <h3>⚙ Backend Automation</h3>
+    <p>Developed Flask-based automation systems with PostgreSQL integration and SMTP workflows during internship projects.</p>
+  </div>
+
+  <div class="highlight-card">
+    <h3>🚀 Projects & Hackathons</h3>
+    <p>Created multiple real-world projects and participated in hackathons focused on business problem-solving and web technologies.</p>
+  </div>
+
 </section>
 
 <div class="divider"></div>
