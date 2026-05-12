@@ -1357,15 +1357,30 @@ footer a { color: var(--accent); text-decoration: none; }
       </div>
     </div>
     <div class="reveal reveal-delay-2">
-      <div class="contact-form">
-        <div class="form-row">
-         <form action= https://formspree.io/f/mykoojea method="POST">
-          <div class="fg"><label>Your Name</label><input type="text" id="cName" placeholder="Jane Smith"></div>
-          <div class="fg"><label>Email</label><input type="email" id="cEmail" placeholder="jane@company.com"></div>
-        </div>
-        <div class="fg"><label>Subject</label><input type="text" id="cSubject" placeholder="Job Opportunity at Acme Corp"></div>
-        <div class="fg"><label>Message</label><textarea id="cMsg" placeholder="Hi Deveshri, I came across your portfolio..."></textarea></div>
-        <button class="btn-send" onclick="sendMsg()">Send Message →</button>
+      <form action="https://formspree.io/f/mykoojea" method="POST">
+
+  <div class="fg">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your Name" required>
+  </div>
+
+  <div class="fg">
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your Email" required>
+  </div>
+
+  <div class="fg">
+    <label>Message</label>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+  </div>
+
+  <input type="hidden" name="_subject" value="New Portfolio Message">
+
+  <button type="submit" class="btn-send">
+    Send Message
+  </button>
+
+</form>
       </div>
     </div>
   </div>
